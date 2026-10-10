@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0e1116" />
+    <title>TOTP Vault</title>
+    <link rel="stylesheet" href="2fa_live.css" />
+    <script src="2fa_live.js" defer></script>
+  </head>
+  <body>
+    <div id="group-app">
+      <div class="g-layout">
+        <div class="g-sidebar">
+          <header class="g-header">
+            <div>
+              <p class="g-eyebrow">Local authenticator</p>
+              <h1 class="g-title">TOTP<span>::</span>Vault</h1>
+            </div>
+          </header>
+          <aside class="g-panel g-groups" aria-label="Danh sách group">
+            <div class="g-panel-head">
+              <span class="g-panel-title"
+                >Groups <span class="g-group-count" id="g-total-groups"></span></span
+              ><button
+                type="button"
+                class="g-btn primary g-add-group"
+                id="g-new-group"
+                title="Tạo group mới"
+                aria-label="Tạo group mới"
+              >
+                +
+              </button>
+            </div>
+            <div class="g-group-list" id="g-group-list"></div>
+          </aside>
+        </div>
+        <main class="g-main"><div id="g-workspace"></div></main>
+      </div>
+      <p class="g-footnote">
+        Dữ liệu lưu trong localStorage của trình duyệt này. Xoá dữ liệu trình duyệt hoặc đổi trình
+        duyệt sẽ mất dữ liệu.
+      </p>
+    </div>
+    <div id="group-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
